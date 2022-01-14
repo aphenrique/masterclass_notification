@@ -1,16 +1,12 @@
 # masterclass_notification
 
-A new Flutter project.
+Um pequeno app para me notificar quando a matrícula para a masterclass da flutterando estiver disponível.
 
-## Getting Started
+Tenho uma caixa de texto onde insiro os minutos que desejo que a verificação seja feita. Quando ligo o contador, o app busca o conteúdo da página da masterclass, faz um hash e compara com o hash salvo anteriormente. Se o conteúdo da página tiver mudado, pelo preço estar disponível, o app muda de cor e avisa que "Está liberada"
 
-This project is a starting point for a Flutter application.
+## O que aprendi ou usei
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Streams
+- Http
+- ValueNotifier
+- Crypto
