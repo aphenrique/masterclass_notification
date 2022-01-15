@@ -67,8 +67,12 @@ class _HomePageState extends State<HomePage> {
                     controller: timeController,
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
+                    enabled: !homeController.trigger,
                   ),
-                  subtitle: const Text("Tempo padrão de busca em minutos"),
+                  subtitle: const Text(
+                    "Tempo padrão de busca em minutos",
+                    textAlign: TextAlign.center,
+                  ),
                   trailing: Switch(
                     value: homeController.trigger,
                     onChanged: (value) {
@@ -99,7 +103,8 @@ class _HomePageState extends State<HomePage> {
             return ListTile(
               title: Text(
                 "${f(hour)}:${f(minutes)}:${f(seconds)}",
-                // style: const TextStyle(fontSize: 36),
+                style: const TextStyle(fontSize: 20),
+                textAlign: TextAlign.center,
               ),
             );
           }
