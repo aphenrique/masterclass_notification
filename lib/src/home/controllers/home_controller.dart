@@ -8,7 +8,7 @@ class HomeController {
   final _blocController = StreamController<Duration>();
 
   HomeController() {
-    _blocController.sink.add(Duration(seconds: 0));
+    _blocController.sink.add(const Duration(seconds: 0));
   }
 
   bool trigger = false;
@@ -19,11 +19,11 @@ class HomeController {
     int time = Duration(minutes: defaultTime).inSeconds;
 
     while (trigger) {
-      bool isChanged = await homeStore.siteIsChanged();
+      await homeStore.siteIsChanged();
 
       for (int i = time; i > 0; i--) {
-        _blocController.sink.add(Duration(seconds: time--));
-        await Future.delayed(Duration(seconds: 1));
+        _blocController.sink.add(Duration(seconds: i));
+        await Future.delayed(const Duration(seconds: 1));
         if (!trigger) break;
       }
     }
